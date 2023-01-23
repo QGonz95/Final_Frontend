@@ -50,7 +50,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
                     <ExCard key={index} exercise={exercise} />
                 ))}
             </Stack>
-            <Stack  id="exercises" sx={{ mt: { lg: '109px' } }} mt="50px" p="20px">
+            <Stack  id="exercises" sx={{ mt: { lg: '109px' } }} mt="50px" p="20px" alignItems='center'>
                 {exercises.length > 9 && (
                     <Pagination
                         color="standard"
