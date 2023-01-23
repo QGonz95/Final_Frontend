@@ -41,7 +41,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
             <Box position="relative" mb="72px">
                 <TextField
                     height="76px"
-                    sx={{ input: { fontWeight: '700', border: 'none', borderRadius: '4px' }, width: { lg: '1170px', xs: '350px' }, backgroundColor: '#fff', borderRadius: '40px' }}
+                    sx={{ input: { fontWeight: '700', border: 'none', borderRadius: '4px' }, width: { lg: '1170px', xs: '350px' }, backgroundColor: '#fff', border: 'none' }}
                     value={search}
                     onChange={(e) => setSearch(e.target.value.toLowerCase())}
                     placeholder="Search Exercise Index"

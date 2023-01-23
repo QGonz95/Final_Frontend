@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import Exercises from '../components/Exercises';
 import SearchExercises from '../components/SearchExercises';
 import MyBanner from '../components/MyBanner';
-
+import Pricing from './Pricing';
 const Home = () => {
   const [exercises, setExercises] = useState([]);
   const [bodyPart, setBodyPart] = useState('all');
@@ -14,6 +14,7 @@ const Home = () => {
       <MyBanner />
       <SearchExercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart} />
       <Exercises setExercises={setExercises} exercises={exercises} bodyPart={bodyPart} />
+      <Pricing />
     </Box>
   );
 };

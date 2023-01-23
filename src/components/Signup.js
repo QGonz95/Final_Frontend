@@ -12,19 +12,6 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Navigate } from 'react-router-dom';
-
-function Copyright(props) {
-    return (
-      <Typography variant="body2" color="text.secondary" align="center" {...props}>
-        {'Copyright © '}
-        <Link color="inherit" href="https://mui.com/">
-          War-Heart Training
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
   
 const theme = createTheme();
 const Signup = (props) => {
@@ -150,7 +137,6 @@ const Signup = (props) => {
                         </Grid>
                     </Box>
                 </Box>
-                <Copyright sx={{ mt: 5 }} />
             </Container>
         </ThemeProvider>
     );
