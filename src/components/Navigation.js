@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Stack } from '@mui/material';
 
 import Logo from '../assets/images/Logo.png';
+import { fontSize } from '@mui/system';
 
 const Navigation = (props) => (
   <Stack direction="row" justifyContent="space-around" sx={{ gap: { sm: '115px', xs: '30px' }, mt: { sm: '22px', xs: '20px' }, justifyContent: 'none' }} px="20px">
@@ -19,6 +20,7 @@ const Navigation = (props) => (
       >
         <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Home</Link>
         <a href="#exercises" style={{ textDecoration: 'none', color: '#3A1212' }}>Exercises</a>
+        <p style={{ fontSize: '18px', margin: '10px -10px', }}>Welcome Back, <span>{props.currentUser.username}</span></p>
         <a
           onClick={() => localStorage.removeItem("currentUser")}
           href="/"
