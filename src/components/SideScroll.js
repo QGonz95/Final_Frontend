@@ -32,7 +32,7 @@ const SideScroll = ({ data, bodyPart, setBodyPart }) => {
             {data.map((i) => (
                 <Box
                     key={i.id || i}
-                    itemId={i.id || i}
+                    itemID={i.id || i}
                     title={i.id || i}
                     m='0 40px'
                 >
