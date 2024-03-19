@@ -10,13 +10,13 @@ import StarIcon from '@mui/icons-material/StarBorder';
 import Typography from '@mui/material/Typography';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
+import { useNavigate } from 'react-router-dom';
 
 const tiers = [
   {
     title: 'Personalized Program',
     price: '60',
     description: [
-      'Help message access',
       'Personalized Training Program',
       'Monthly Update',
     ],
@@ -28,9 +28,9 @@ const tiers = [
     subheader: 'Most popular',
     price: '125',
     description: [
-      '20 users included',
-      '10 GB of storage',
-      'Help center access',
+      'In Person Coaching',
+      'Nutritional Guidance',
+      'Priority message access',
       'Priority email support',
     ],
     buttonText: 'Contact us',
@@ -51,28 +51,32 @@ const tiers = [
 ];
 
 function Pricing() {
+  let navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contact")
+  }
   return (
     <React.Fragment>
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
       <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
         <Typography
           component="h1"
-          variant="h2"
+          variant="h4"
           align="center"
           color="text.primary"
           gutterBottom
         >
           Pricing
         </Typography>
-        <Typography variant="h5" align="center" color="text.secondary" component="p">
+        <Typography variant="h6" align="center" color="text.secondary" styles={{}} component="p">
         Take control of your health and well-being with one-on-one guidance and support from a personal trainer. It is time to invest in yourself and your fitness goals and see the results you've always dreamed of.
         </Typography>
       </Container>
-      {/* End hero unit */}
+
       <Container maxWidth="md" component="main">
         <Grid container spacing={5} alignItems="flex-end">
           {tiers.map((tier) => (
-            // Enterprise card is full width at sm breakpoint
             <Grid
               item
               key={tier.title}
@@ -131,9 +135,7 @@ function Pricing() {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant}>
-                    {tier.buttonText}
-                  </Button>
+                  <Button fullWidth variant={tier.buttonVariant} value={tier.buttonText} onClick={handleClick}>{tier.buttonText}</Button>
                 </CardActions>
               </Card>
             </Grid>

@@ -41,7 +41,7 @@ const ExDetails = () => {
         <Box>
             <ShowExDetails exDetail={exDetail} />
             <ExVideos exVideos={exVideos} name={exDetail.name} />
-            <SimilarEx muscleTarget={muscleTarget} name={exDetail.target}/>
+            <SimilarEx muscleTarget={muscleTarget} name={exDetail.target} />
         </Box>
     )
 }

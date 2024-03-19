@@ -11,14 +11,14 @@ const MyBanner = () => (
       Takes Effort
     </Typography>
     <Typography fontSize="22px" fontFamily="Alegreya" lineHeight="35px">
-      Try out some exercises to get started<br />
+      Try out some exercises to get started,<br />
       Reach out for Coaching.
     </Typography>
     <Stack>
-      <a href="#exercises" style={{ marginTop: '45px', textDecoration: 'none', width: '200px', textAlign: 'center', background: '#FF2625', padding: '14px', fontSize: '22px', textTransform: 'none', color: 'white', borderRadius: '4px' }}>Explore Exercises</a>
+      <a href="/exercises" style={{ marginTop: '45px', textDecoration: 'none', width: '200px', textAlign: 'center', background: '#FF2625', padding: '14px', fontSize: '22px', textTransform: 'none', color: 'white', borderRadius: '4px' }}>Explore Exercises</a>
     </Stack>
     <Typography fontWeight={600} color="#FF2625" sx={{ opacity: '0.1', display: { lg: 'block', xs: 'none' }, fontSize: '175px' }}>
-      Exercise
+      Work Hard <br/>Train Hard
     </Typography>
     <img src={Me} alt="hero-banner" className="hero-banner-img" />
   </Box>
