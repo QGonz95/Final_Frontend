@@ -12,14 +12,14 @@ function Copyright() {
       <Link color="inherit" href="/"  sx={{pb: '10px',}} >
         War-Heart Training
       </Link>{' '}
-      {new Date().getFullYear()}
+      {2020}
       {'.'}
     </Typography>
   );
 }
 const Footer = () => (
-  <Box mt="px" bgcolor="">
-    <Stack gap="40px" sx={{ alignItems: 'center' }} flexWrap="wrap" px="10px" pt="40px">
+  <Box sx={{ position: 'relative'}}>
+    <Stack gap="20px" sx={{ alignItems: 'center' }} flexWrap="wrap" px="10px" pt="40px">
       <img src={Logo} alt="logo" style={{ width: '350px', height: '100px' }} />
       <Copyright/>
     </Stack>

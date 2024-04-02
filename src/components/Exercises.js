@@ -5,6 +5,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import { exOpts, getData } from '../utils/fetch';
 import ExCard from './ExCard';
 import Load from './Load';
+import {getExercises} from './ExerciseService'
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -14,15 +15,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
     useEffect(() => {
         const fetchExercisesData = async () => {
-            let exercisesData = [];
+            const data = await getExercises(bodyPart)
 
-            if (bodyPart === 'all') {
-                exercisesData = await getData('https://exercisedb.p.rapidapi.com/exercises', exOpts)
-            } else {
-                exercisesData = await getData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exOpts);
-            }
-
-            setExercises(exercisesData);
+            setExercises(data);
         };
 
         fetchExercisesData();

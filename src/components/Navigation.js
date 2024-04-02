@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Stack, Button, MenuItem,  } from '@mui/material';
+import { Stack, Button, MenuItem, } from '@mui/material';
 
 import Logo from '../assets/images/Logo.png';
 
@@ -12,7 +12,8 @@ const Navigation = () => (
     <Stack direction="row" gap="30px" fontFamily="Alegreya" fontSize="24px" alignItems="flex-end">
       <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Home</Link>
       {/* <a href="#exercises" style={{ textDecoration: 'none', color: '#3A1212' }}>Exercises</a> */}
-    <Link to="/services" style={{textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Services</Link>
+      <Link to="/about" style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Services</Link>
+      <Link to="/gallery" style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Gallery</Link>
     </Stack>
   </Stack>
 );

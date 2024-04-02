@@ -10,7 +10,8 @@ import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Exercise from './pages/Exercise'
 import ExDetails from './pages/ExDetails'
-
+import MyVideos from './pages/MyVideos'
+import About from './pages/About'
 function App() {
 
     return (
@@ -20,6 +21,8 @@ function App() {
                 <Route path='/' element={<HomePage />} />
                 <Route path='/services' element={<Services />} />
                 <Route path='/contact' element={<Contact />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/gallery' element={<MyVideos />} />
                 <Route path='/exercises' element={<Exercise />} />
                 <Route path='/exercise/:id' element={<ExDetails />} />
             </Routes>

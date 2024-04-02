@@ -25,7 +25,7 @@ const tiers = [
   },
   {
     title: '1-ON-1',
-    subheader: 'Most popular',
+    subheader: 'Most Popular',
     price: '125',
     description: [
       'In Person Coaching',
@@ -59,29 +59,14 @@ function Pricing() {
   return (
     <React.Fragment>
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
-      <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
-        <Typography
-          component="h1"
-          variant="h4"
-          align="center"
-          color="text.primary"
-          gutterBottom
-        >
-          Pricing
-        </Typography>
-        <Typography variant="h6" align="center" color="text.secondary" styles={{}} component="p">
-        Take control of your health and well-being with one-on-one guidance and support from a personal trainer. It is time to invest in yourself and your fitness goals and see the results you've always dreamed of.
-        </Typography>
-      </Container>
-
-      <Container maxWidth="md" component="main">
-        <Grid container spacing={5} alignItems="flex-end">
+      <Container sx={{maxWidth: {lg:'lg', md: 'md', sm:'sm', xs: 'sm'}, }} component="main">
+        <Grid container spacing={5} alignItems="center">
           {tiers.map((tier) => (
             <Grid
               item
               key={tier.title}
               xs={12}
-              sm={tier.title === 'Enterprise' ? 12 : 6}
+              sm={10}
               md={4}
             >
               <Card>
