@@ -12,14 +12,14 @@ const MyBanner = () => (
       Takes Effort
     </Typography>
     <Typography fontSize="22px" fontFamily="Alegreya" lineHeight="35px">
-      Passionate Boxing instructor, Dedicated Personal Trainer,<br />
-      and Try out some Exercises .
+      Passionate Boxing instructor and Dedicated Personal Trainer,<br />
+      Try out some Exercises .
     </Typography>
     <Stack>
       <Link to="/exercises" style={{ marginTop: '45px', textDecoration: 'none', width: '200px', textAlign: 'center', background: '#FF2625', padding: '14px', fontSize: '22px', textTransform: 'none', color: 'white', borderRadius: '4px' }}>Interested in training?</Link>
     </Stack>
     <Typography fontWeight={500} color="#FF2625" sx={{ opacity: '0.1', display: { lg: 'block', xs: 'none' }, fontSize: '175px' }}>
-      Work Hard <br/>Train Hard
+      Train Hard <br/>& Thrive
     </Typography>
     <img src={Me} alt="hero-banner" className="hero-banner-img" />
   </Box>

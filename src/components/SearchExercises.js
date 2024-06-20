@@ -26,12 +26,15 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
     }
 
     const getExData = async () => {
+
         const bodyData = await getData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exOpts);
         setBodyParts(['all', ...bodyData])
+
     }
     useEffect(() => {
         getExData();
     }, [])
+
     return (
         <Stack alignItems='center' my='35px' justifyContent='center' p='20px'>
             <Typography fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="49px" textAlign="center">
